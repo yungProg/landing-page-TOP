@@ -1,0 +1,64 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    font-size: 100%;
+    font-family: "Roboto";
+}
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img {
+    width: 100%;
+}
+
+ul, 
+li {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.header {
+    gap: 10%;
+    align-items: center;
+    font-size: 1.3rem;
+    padding: 10px 40px;
+    background-color: #5a7688
+}
+
+.logo-wrapper {
+    width: 100px;
+}
+
+.flex {
+    display: flex;
+}
+
+.nav {
+    gap: 5%;
+    flex: 1 1 auto;
+}
+
+.nav-links {
+    justify-content: space-between;
+    flex: 1 1 auto;
+}
+
+.nav-social-links {
+    flex: 0 1 auto;
+    gap: 20px;
+}
