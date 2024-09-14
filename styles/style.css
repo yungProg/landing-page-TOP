@@ -1,3 +1,9 @@
+:root {
+    --small: 0.8rem;
+    --normal: 1rem;
+    --big: 1.3rem;
+}
+
 *,
 *::before,
 *::after {
@@ -13,13 +19,13 @@ html, body {
 
 .container {
     width: 100%;
-    max-width: 1400px;
+    max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
 }
 
 img {
-    width: 100%;
+    max-width: 100%;
 }
 
 ul, 
@@ -32,16 +38,24 @@ a {
     text-decoration: none;
 }
 
+.small {
+    font-size: 0.8rem;
+}
+
+.bold {
+    font-weight: 700;
+}
+
 .header {
     gap: 10%;
     align-items: center;
     font-size: 1.3rem;
     padding: 10px 40px;
-    background-color: #5a7688
+    border-bottom: 1px solid #dbdbdb;
 }
 
 .logo-wrapper {
-    width: 100px;
+    flex: 0 0 50px;
 }
 
 .flex {
@@ -49,16 +63,359 @@ a {
 }
 
 .nav {
-    gap: 5%;
+    gap: 2em;
     flex: 1 1 auto;
 }
 
 .nav-links {
-    justify-content: space-between;
-    flex: 1 1 auto;
+    margin-left: auto;
+    gap: 1.2em;
 }
 
 .nav-social-links {
-    flex: 0 1 auto;
+    gap: 15px;
+}
+
+.hero {
+    padding: 72px 0;
+    align-items: center;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.hero-texts-wrapper {
+    gap: 2vh;
+}
+
+.hero-texts-wrapper h1 {
+    font-size: 2.3rem;
+    width: 16ch;
+    color: #011b3a;
+}
+
+.hero-texts-wrapper p {
+    max-width: 80ch;
+}
+
+.hero-img-wrapper {
+    flex: 0 1 20%;
+}
+
+.hero-img-wrapper > img {
+    border: 10px solid #5a7688;
+    border-radius: 150px;
+}
+
+.stat {
     gap: 20px;
+    text-align: center;
+}
+
+.stat .bold {
+    font-size: 1.7rem;
+    color: #5a7688;
+}
+
+.col {
+    flex-direction: column;
+}
+
+.qualities {
+    background-color: #5a7688;
+    justify-content: space-around;
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.qualities > .flex.col.small {
+    gap: 10px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.qualities p {
+    max-width: 25ch;
+}
+
+.scale {
+    z-index: 1;
+    position: relative;
+}
+
+.scale::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: #011b3a;
+    transform: scaleY(2.2);
+    z-index: -1;
+    border-radius: 10%;
+}
+
+.qualities > .flex.col.small i {
+    font-size: var(--big);
+}
+
+.about-us, .partners, .services, .contact-us, .process, .review, .security-solution, .blog-article, .footer {
+    background-color: darkcyan;
+    margin-top: 10vh;
+}
+
+.about-us > div {
+    flex: 1
+}
+
+.about-us > :first-child img {
+    height: 200px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    margin-left: auto;
+    display: block;
+}
+
+.about-us h3 {
+    margin-top: 30px;
+}
+
+.about-us > :nth-child(2) > *, .about-us > :nth-child(3) > * {
+    margin-bottom: 15px;
+}
+
+.about-us .flex.why-choose-us-wrapper {
+    gap: 10px;
+}
+
+.about-us > :not(:first-child) {
+    padding: 20px;
+}
+
+.flex.partners-logo-wrappers {
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.flex.partners-logo-wrappers > :first-child {
+    flex: 0 0 40ch;
+}
+
+
+.services > :first-child {
+    gap: 20%;
+}
+
+.services > :nth-child(2) {
+    gap: 10%;
+}
+
+.services .flex.col {
+    align-items: center;
+    gap: 1vh;
+}
+
+.services .flex.col:first-of-type{
+    color: yellow;
+    border-radius: 100px;
+    background-color: #5a7688;
+}
+
+.contact-us {
+    gap: 25px;
+    padding-top: 10vh;
+}
+
+.contact-us > * {
+    flex: 1 1 500px;
+}
+
+.contact-us h4 {
+    width: 15ch;
+    font-size: 2rem;
+    margin-bottom: 1vh;
+}
+
+.contact-us p {
+    width: 45ch;
+    margin-bottom: 1vh;
+}
+
+.contact-us img {
+    width: 300px;
+    mix-blend-mode: color-burn;
+}
+
+.contact-us form {
+    max-width: 300px;
+    gap: 10px;
+}
+
+.contact-us form * {
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    background-color: inherit;
+}
+
+.contact-us form *::placeholder {
+    color: #ffffff;
+}
+
+.process > h3, .process > p {
+    text-align: center;
+    margin-bottom: 1vh;
+}
+
+.process > .flex {
+    gap: 30px;
+    justify-content: space-evenly;
+}
+
+.process .flex.col {
+    background-color: #e2e2e2;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.process .flex.col > * {
+    width: 30ch;
+    text-align: center;
+    margin-bottom: 1vh;
+}
+
+.review > :first-child  > *{
+    flex: 0 0 50%;
+}
+
+.review > :first-child h3 {
+    font-size: 2rem;
+}
+
+.review  > :nth-child(2) > :first-child{
+    flex: 0 0 50%;
+    background-color: yellow;
+}
+
+.review img {
+    width: 100%;
+    aspect-ratio: 16/6;
+    object-fit: cover;
+}
+
+.review .flex.col {
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.review .flex.col .flex {
+    align-items: center;
+    gap: 10px;
+}
+
+#fpf {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+}
+
+.security-solution {
+    padding: 15vh 0;
+}
+
+.security-solution, .security-solution > :not(:last-child), .blog-article > h3, .blog-article > p {
+    text-align: center;
+    margin-bottom: 1vh;
+}
+
+.security-solution h3 {
+    font-size: 2rem
+}
+
+.blog-article > h3 {
+    font-size: 1.8rem;
+}
+
+.blog-article > div {
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    gap: 20px;
+}
+
+.blog-article article {
+    flex: 0 0 250px;
+}
+
+.blog-article img {
+    aspect-ratio: 1/1.5;
+    object-fit: cover;
+}
+
+.footer > :first-child {
+    align-items: center;
+    gap: 20px;
+}
+
+.footer > :first-child > div {
+    margin-right: auto;
+}
+
+.footer h3 {
+    font-size: 1.8rem;
+    margin-bottom: 2vh;
+}
+
+.footer .submit {
+    margin-right: 20%;
+}
+
+#email-footer, .footer .submit {
+    padding: 5px;background-color: transparent;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    color: #ffffff;
+}
+
+.footer > :nth-child(2) {
+    margin-top: 4vh;
+    gap: 40px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5vh 0;
+    border-bottom: 1px solid #ffffff;
+}
+
+.footer > :nth-child(2) span {
+    margin-right: 10px;
+}
+
+.footer > :nth-child(2) p {
+    margin-bottom: 2vh;
+}
+
+.footer > :nth-child(2) > :first-child {
+    width: 35ch;
+    flex: 1;
+}
+
+.footer h4 {
+    margin-bottom: 2vh;
+}
+
+.footer li:not(:last-of-type) {
+    margin-bottom: 1vh;
+}
+
+.footer .links {
+    justify-content: space-between;
+    flex: 2;
+}
+
+.footer .links > :last-child {
+    width: 35ch;
+}
+
+.footer > p {
+    text-align: center;
+    padding: 4vh 0;
 }
