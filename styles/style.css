@@ -23,6 +23,8 @@ html, body {
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
+    padding-left: max(1%, 10px);
+    padding-right: max(1%, 10px);
 }
 .header, .services, .contact-us, .process, .review, .security-solution, .blog-article, .footer {
     padding-left: min(5%, 50px);
@@ -382,7 +384,7 @@ button:hover {
 }
 
 .process > .flex {
-    gap: 30px;
+    gap: 20px;
     justify-content: space-evenly;
 }
 
@@ -394,7 +396,6 @@ button:hover {
 }
 
 .process .flex.col > * {
-    width: 30ch;
     text-align: center;
     margin-bottom: 1vh;
 }
@@ -516,8 +517,8 @@ button:hover {
 }
 
 .blog-article article {
-    flex: 0 0 250px;
-    gap: 10px;
+    flex: 0 0 33%;
+    gap: 20px;
 }
 
 .blog-article article i {
@@ -606,11 +607,12 @@ button:hover {
 
 .footer .links {
     justify-content: space-between;
+    gap: 10px;
     flex: 2;
 }
 
 .footer .links > :last-child {
-    width: 35ch;
+    width: min(50%, 35ch);
 }
 
 .footer > p {
