@@ -24,6 +24,10 @@ html, body {
     margin-left: auto;
     margin-right: auto;
 }
+.header, .services, .contact-us, .process, .review, .security-solution, .blog-article, .footer {
+    padding-left: min(5%, 50px);
+    padding-right: min(5%, 50px);
+}
 
 img {
     max-width: 100%;
@@ -173,16 +177,13 @@ button:hover {
     font-size: var(--big);
 }
 
-.about-us, .partners, .services, .contact-us, .process, .review, .security-solution, .blog-article, .footer {
+/* .about-us, .partners, .services, .contact-us, .process, .review, .security-solution, .blog-article, .footer {
     margin-top: 120px;
-}
-
- .blog-article, .footer {
-    background-color: darkcyan;
-}
+} */
 
 .about-us {
     border-radius: 20px;
+    padding-top: 120px;
 }
 
 .about-us > div {
@@ -242,6 +243,10 @@ button:hover {
     padding: 20px;
 }
 
+.partners {
+    padding: 80px 0;
+}
+
 .partners > h4 {
     color: #011b3a;
     font-size: var(--big);
@@ -271,7 +276,8 @@ button:hover {
 }
 
 .services {
-    padding: 40px 0;
+    padding-top: 40px;
+    padding-bottom: 40px;
     background-color: #dadada3f;
 }
 
@@ -311,7 +317,7 @@ button:hover {
 
 .contact-us {
     gap: 25px;
-    padding-top: 10vh;
+    padding-top: 40px;
     color: #ffffff;
     background-color: #5a7688;
 }
@@ -336,6 +342,7 @@ button:hover {
 }
 
 .contact-us form {
+    margin-top: 20px;
     max-width: 300px;
     gap: 10px;
 }
@@ -351,6 +358,10 @@ button:hover {
 
 .contact-us form *::placeholder {
     color: #ffffff;
+}
+
+.process {
+    padding: 50px 0;
 }
 
 .process > h3, .process > p {
@@ -408,6 +419,10 @@ button:hover {
 
 .process .flex.col:nth-of-type(2) > span {
     background-color: #011b3a;
+}
+
+.review {
+    padding-bottom: 100px;
 }
 
 .review > :first-child {
@@ -477,24 +492,51 @@ button:hover {
     font-size: 2rem
 }
 
+.blog-article {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
 .blog-article > h3 {
     font-size: 1.8rem;
+}
+
+.blog-article > p {
+    width: min(100%, 35ch);
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .blog-article > div {
     margin-left: auto;
     margin-right: auto;
-    justify-content: center;
+    justify-content: space-between;
     gap: 20px;
 }
 
 .blog-article article {
     flex: 0 0 250px;
+    gap: 10px;
 }
+
+.blog-article article i {
+    margin-right: 5px;
+}
+
+.blog-article article .learn-more-link {
+    margin-top: auto;
+} 
 
 .blog-article img {
     aspect-ratio: 1/1.5;
     object-fit: cover;
+}
+
+.footer {
+    background: #5a7688;
+    color: #ffffff;
+    padding-top: 40px;
 }
 
 .footer > :first-child {
@@ -515,10 +557,15 @@ button:hover {
     margin-right: 20%;
 }
 
-#email-footer, .footer .submit {
-    padding: 5px;background-color: transparent;
+#email-footer {
+    padding: 5px;
+    background-color: transparent;
     border: 1px solid #ffffff;
     border-radius: 5px;
+    color: #ffffff;
+}
+
+#email-footer::placeholder {
     color: #ffffff;
 }
 
@@ -533,6 +580,11 @@ button:hover {
 
 .footer > :nth-child(2) span {
     margin-right: 10px;
+}
+
+.footer .fa-brands {
+    background-color: #011b3a;
+    padding: 5px;
 }
 
 .footer > :nth-child(2) p {
